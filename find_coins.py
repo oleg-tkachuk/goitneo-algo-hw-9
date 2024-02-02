@@ -36,6 +36,14 @@ def find_min_coins(amount):
     return result
 
 def main():
+    amount_to_be_issued = 31173
+    coins_greedy = find_coins_greedy(amount_to_be_issued)
+    coins_min = find_min_coins(amount_to_be_issued)
+    print(f"Homework 9 - find_coins_greedy | The amount to be issued to the client is {amount_to_be_issued} coins with a face value of {coins_greedy}")
+    print(f"Homework 9 - find_min_coins | The amount to be issued to the client is {amount_to_be_issued} coins with a face value of {coins_min}")
+
+    print(f"\nHomework 9 | Testing of algorithms...\n")
+
     for amount in [1000, 10000, 21000, 32000, 43000, 54000, 65000, 76000, 87000, 98000, 109000]:
         find_coins_greedy_time = time_search_algorithm(find_coins_greedy, amount)
         print(f"Homework 9 - find_coins_greedy | For the sum {amount}, the search time was: {find_coins_greedy_time} seconds")
